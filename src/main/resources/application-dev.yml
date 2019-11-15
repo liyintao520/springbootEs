@@ -1,0 +1,28 @@
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#    preferSameZoneEureka: true
+#  registry-fetch-interval-seconds: 4000
+#  instance:
+#    prefer-ip-address: true
+#    lease-renewal-interval-in-seconds: 2
+#    lease-expiration-duration-in-seconds: 4
+#    metadataMap:
+#      zone: zone1
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:${spring.application.name}:@project.version@
+#
+server:
+  port: 8050
+  tomcat:
+    access-log-pattern: checkserver--%h %l %u %t "%r" %s %b (%D ms)
+    # log pattern of the access log
+    access-log-enabled: true
+    accesslog:
+      directory: /opt/deployjars/login/logs/
+
+es:
+  host: 127.0.0.1
+  port: 9200
+  scheme: http
