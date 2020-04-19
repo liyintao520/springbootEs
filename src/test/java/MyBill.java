@@ -26,9 +26,12 @@ public class MyBill {
     private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     public static void main(String[] args) {
-        shouldReturn(33175,0,0,0,0, 0,0,0,0,0);
+        // 当月待还总数
+        monthlyReturn(0,0,0,0,0, 0,0,0,0,0);
+        // 总欠款
         totalArrears(47825,20099,8000,69000, 0,72000,50000,16100,16800,9000);
     }
+
 
     /**
      * 输入当前月份应还金额，求总应还数
@@ -44,12 +47,13 @@ public class MyBill {
      * @param wifeXy    妻子兴业--应还金额
      * @return  求总应还
      */
-    public static Integer shouldReturn (Integer myGf, Integer myMs, Integer myZs, Integer myZfbJb, Integer myZfbHb,
+    public static Integer monthlyReturn (Integer myGf, Integer myMs, Integer myZs, Integer myZfbJb, Integer myZfbHb,
                                         Integer myWx, Integer myPa, Integer myZx, Integer wifeGf, Integer wifeXy) {
         Integer shouldReturn = myGf + myMs + myZs + myZfbJb + myZfbHb + myWx + myPa + myZx + wifeGf + wifeXy;
         System.out.println("当前时间：" + sdf.format(new Date()) + ", 我的【总应还】是：" + shouldReturn);
         return shouldReturn;
     }
+
 
     /**
      * 输入剩余额度，求总欠款
