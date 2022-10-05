@@ -32,7 +32,7 @@
 			<dependency>
 				<groupId>org.elasticsearch</groupId>
 				<artifactId>elasticsearch</artifactId>
-				<version>7.4.2</version>
+				<version>7.14.0</version>
 			</dependency>
 			<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.elasticsearch.client/elasticsearch-rest-client &ndash;&gt;-->
 			<dependency>
@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
-			<version>7.4.2</version>
+			<version>7.14.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.elasticsearch.client/elasticsearch-rest-high-level-client -->
 		<dependency>
